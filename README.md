@@ -1,7 +1,5 @@
 February 2016 
 
 
-Training Java
-
- Framework
+Training Java Framework
 http://becomejavasenior.com/
