@@ -10,11 +10,9 @@
 
     <mvc:annotation-driven />
 
-<!--
-    <context:component-scan base-package="com.becomejavasenior.mvc.dao.daoImpl"/>
--->
+    <bean id="userDao" class="com.becomejavasenior.mvc.repository.UserRepository" />
+
     <context:component-scan base-package="com.becomejavasenior.mvc.controllers"/>
-    <bean id="userDao" class="com.becomejavasenior.mvc.dao.daoImpl.UserDaoImpl" />
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>

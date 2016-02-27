@@ -1,6 +1,5 @@
-package com.becomejavasenior.mvc.dao.daoImpl;
+package com.becomejavasenior.mvc.repository;
 
-import com.becomejavasenior.mvc.dao.UserDao;
 import com.becomejavasenior.mvc.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,8 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-@SuppressWarnings({"unchecked", "rawtypes"})
-public class UserDaoImpl{
+public class UserRepository {
     private static final String QUERY_SELECT_ALL = "from User";
 
     @Autowired

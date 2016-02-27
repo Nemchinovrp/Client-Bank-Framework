@@ -1,6 +1,6 @@
 package com.becomejavasenior.mvc.controllers;
 
-import com.becomejavasenior.mvc.dao.daoImpl.UserDaoImpl;
+import com.becomejavasenior.mvc.repository.UserRepository;
 import com.becomejavasenior.mvc.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +15,7 @@ import java.util.List;
 public class HelloController {
 
 	@Autowired
-	private UserDaoImpl userDao;
+	private UserRepository userDao;
 
 	/*@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
