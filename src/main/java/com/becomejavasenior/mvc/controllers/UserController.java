@@ -12,19 +12,14 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-public class HelloController {
+public class UserController {
 
 	@Autowired
-	private UserRepository userDao;
+	private UserRepository userRepository;
 
-	/*@RequestMapping(method = RequestMethod.GET)
-	public String printWelcome(ModelMap model) {
-		model.addAttribute("message", "Hello, Conroller Spring MVC!");
-		return "hello";
-	}*/
 	@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
-		List<User> users = userDao.getAllUser();
+		List<User> users = userRepository.getAllUser();
 		model.addAttribute("users", users);
 		return "listUser";
 	}
