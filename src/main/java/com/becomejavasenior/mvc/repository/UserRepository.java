@@ -1,5 +1,6 @@
 package com.becomejavasenior.mvc.repository;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import com.becomejavasenior.mvc.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,15 +12,19 @@ import java.util.List;
 
 @Repository
 public class UserRepository {
+    static final Logger logger = LogManager.getRootLogger();
+
     private static final String QUERY_SELECT_ALL = "from User";
 
     @Autowired
     private SessionFactory sessionFactory;
 
-  /*  @Override
-    public User createUser(User user) {
-        return null;
-    }*/
+    @Transactional
+    public void createUser(User user) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(user);
+        logger.info("User save");
+    }
 
     @Transactional
     public List<User> getAllUser() {
@@ -28,18 +33,27 @@ public class UserRepository {
         return users;
     }
 
-   /* @Override
-    public User getUserById(int id) {
-        return null;
-    }
-
-    @Override
+    @Transactional
     public void updateUser(User user) {
-
+        Session session = sessionFactory.getCurrentSession();
+        session.update(user);
+        logger.info("User update");
     }
 
-    @Override
-    public void deleteUser(int id) {
+    @Transactional
+    public User getUserById(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        User user = (User) session.load(User.class, new Integer(id));
+        return user;
+    }
 
-    }*/
+    @Transactional
+    public void deleteUser(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        User user = (User) session.load(User.class, new Integer(id));
+        if (null != user) {
+            session.delete(user);
+        }
+        logger.info("User delete");
+    }
 }
