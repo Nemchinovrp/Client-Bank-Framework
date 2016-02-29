@@ -1,16 +1,28 @@
 package com.becomejavasenior.mvc.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "Account")
 public class Account {
+    @Id
     private int id;
+    @Column(name = "accountType")
     private String accountType;
+    @Column(name = "id_currency")
     private int idCurrency;
+    @Column(name = "balance")
     private double balance;
+    @Column(name = "user_id")
     private int usersId;
 
-    public Account(){
+    public Account() {
 
     }
+
     public Account(int id, String accountType, int idCurrency, double balance, int usersId) {
         this.id = id;
         this.accountType = accountType;

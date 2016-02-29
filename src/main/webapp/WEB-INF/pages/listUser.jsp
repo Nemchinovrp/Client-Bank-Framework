@@ -40,7 +40,7 @@
     </c:forEach>
 </table>
 <p>
-    <a href="AdminUserListController.do?action=insert">Add User</a>
+    <a href="/addUserForm">Add User</a>
 </p>
 </body>
 </html>

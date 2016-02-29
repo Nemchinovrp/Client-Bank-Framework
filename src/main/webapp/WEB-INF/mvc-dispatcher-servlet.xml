@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:beans="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -8,10 +8,10 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
 
-    <bean id="userDao" class="com.becomejavasenior.mvc.repository.UserRepository" />
-
+    <bean id="userRepository" class="com.becomejavasenior.mvc.repository.UserRepository"/>
+    <bean id="accountRepository" class="com.becomejavasenior.mvc.repository.AccountRepository"/>
     <context:component-scan base-package="com.becomejavasenior.mvc.controllers"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
