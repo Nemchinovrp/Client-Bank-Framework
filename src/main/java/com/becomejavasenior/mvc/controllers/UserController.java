@@ -34,12 +34,12 @@ public class UserController {
 	@RequestMapping("/addUser")
 	public String addUser(@ModelAttribute User user) {
 		userRepository.createUser(user);
-		return "redirect:/";
+		return "redirect:/User";
 	}
 	@RequestMapping(value = "/deleteUser/{id}", method = RequestMethod.GET)
 	public String deleteUser(@PathVariable Integer id) {
 		userRepository.deleteUser(id);
-		return "redirect:/";
+		return "redirect:/User";
 	}
 
 }
