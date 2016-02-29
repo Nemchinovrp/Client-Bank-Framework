@@ -27,12 +27,12 @@
             <td>${account.idCurrency}</td>
             <td>${account.balance}</td>
             <td>${account.usersId}</td>
-            <td><a href="AdminAccountDeleteController.do?action=delete&id=<c:out value="${account.id}"/>">Delete</a></td>
+            <td><a href="${pageContext.request.contextPath}/Account/deleteAccount/${account.id}">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
 <p>
-    <a href="/addAccountForm">Add Account</a>
+    <a href="Account/addAccountForm">Add Account</a>
 </p>
 </body>
 </html>

@@ -12,7 +12,7 @@
 <div class="container" style="padding:150px 0">
     <div class="row">
         <div class="col-md-offset-5 col-md-10">
-            <form  action="AdminAccountAddController" method="post">
+            <form  action="addAccount" method="post">
                 <fieldset>
                     <div class="form-group">
                         <%--@declare id="id"--%><label for="id"> Id </label>

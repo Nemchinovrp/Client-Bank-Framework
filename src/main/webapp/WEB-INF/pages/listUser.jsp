@@ -35,7 +35,7 @@
             <td>${user.registrationDate}</td>
             <td>${user.gender}</td>
             <td>${user.role}</td>
-            <td><a href="AdminUserDeleteController.do?action=delete&id=<c:out value="${user.id}"/>">Delete</a></td>
+            <td><a href="${pageContext.request.contextPath}/User/deleteUser/${user.id}">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
