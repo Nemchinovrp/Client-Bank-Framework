@@ -40,7 +40,7 @@
     </c:forEach>
 </table>
 <p>
-    <a href="/addUserForm">Add User</a>
+    <a href="${pageContext.request.contextPath}/User/addUserForm">Add User</a>
 </p>
 </body>
 </html>
