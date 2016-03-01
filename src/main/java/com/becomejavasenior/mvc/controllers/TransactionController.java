@@ -20,14 +20,14 @@ public class TransactionController {
     private TransactionRepository transactionRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String printWelcome(ModelMap model) {
+    public String viewAllTransactions(ModelMap model) {
         List<Transaction> transactions = transactionRepository.getAllTransaction();
         model.addAttribute("transactions", transactions);
         return "listTransaction";
     }
 
     @RequestMapping("/addTransactionForm")
-    public String addTransactionForm(ModelMap model) {
+    public String addTransactionForm() {
         return "transaction";
     }
 

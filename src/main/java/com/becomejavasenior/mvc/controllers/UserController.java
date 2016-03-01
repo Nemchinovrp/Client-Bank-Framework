@@ -20,7 +20,7 @@ public class UserController {
 	private UserRepository userRepository;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String printWelcome(ModelMap model) {
+	public String viewAllUser(ModelMap model) {
 		List<User> users = userRepository.getAllUser();
 		model.addAttribute("users", users);
 		return "listUser";
@@ -28,7 +28,7 @@ public class UserController {
 
 	@RequestMapping("/addUserForm")
 	public String addUserForm(ModelMap model) {
-		return "addUser";
+		return "user";
 	}
 
 	@RequestMapping("/addUser")

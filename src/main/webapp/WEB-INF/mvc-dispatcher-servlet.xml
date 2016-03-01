@@ -10,6 +10,10 @@
 
     <mvc:annotation-driven/>
 
+    <mvc:resources mapping="/resources/**" location="/resources/"
+                   cache-period="31556926"/>
+
+
     <bean id="userRepository" class="com.becomejavasenior.mvc.repository.UserRepository"/>
     <bean id="accountRepository" class="com.becomejavasenior.mvc.repository.AccountRepository"/>
     <bean id="transactionRepository" class="com.becomejavasenior.mvc.repository.TransactionRepository"/>

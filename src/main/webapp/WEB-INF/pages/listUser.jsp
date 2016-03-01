@@ -42,5 +42,8 @@
 <p>
     <a href="${pageContext.request.contextPath}/User/addUserForm">Add User</a>
 </p>
+<p>
+    <a href="${pageContext.request.contextPath}/">Home</a>
+</p>
 </body>
 </html>

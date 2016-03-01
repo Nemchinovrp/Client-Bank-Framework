@@ -34,6 +34,9 @@
 <p>
     <a href="${pageContext.request.contextPath}/Transaction/addTransactionForm">Add Transaction</a>
 </p>
+<p>
+    <a href="${pageContext.request.contextPath}/">Home</a>
+</p>
 </body>
 </html>
 

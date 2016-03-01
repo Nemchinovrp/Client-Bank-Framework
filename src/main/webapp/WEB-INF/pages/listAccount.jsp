@@ -34,5 +34,8 @@
 <p>
     <a href="Account/addAccountForm">Add Account</a>
 </p>
+<p>
+    <a href="${pageContext.request.contextPath}/">Home</a>
+</p>
 </body>
 </html>

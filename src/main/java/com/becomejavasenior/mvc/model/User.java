@@ -17,8 +17,10 @@ public class User {
     @Column(name="password")
     private String password;
     @Column(name="dateOfBirth")
+    @Temporal(value=TemporalType.DATE)
     private Date dateOfBirth;
     @Column(name="registrationdate")
+    @Temporal(value=TemporalType.DATE)
     private Date registrationDate;
     @Column(name="id_gender")
     private String gender;

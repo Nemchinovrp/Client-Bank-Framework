@@ -20,7 +20,7 @@ public class AccountController {
     private AccountRepository accountRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String printWelcome(ModelMap model) {
+    public String viewAllAccount(ModelMap model) {
         List<Account> accounts = accountRepository.getAllAccount();
         model.addAttribute("accounts", accounts);
         return "listAccount";
