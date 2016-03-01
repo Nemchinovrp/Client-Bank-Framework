@@ -18,6 +18,7 @@
         <th>Balance</th>
         <th>User</th>
         <th>Action</th>
+        <th>Action</th>
     </tr>
     </thead>
     <c:forEach items="${accounts}" var="account">
@@ -27,6 +28,7 @@
             <td>${account.idCurrency}</td>
             <td>${account.balance}</td>
             <td>${account.usersId}</td>
+            <td><a href="${pageContext.request.contextPath}/Account/editAccountForm/${account.id}">Edit</a></td>
             <td><a href="${pageContext.request.contextPath}/Account/deleteAccount/${account.id}">Delete</a></td>
         </tr>
     </c:forEach>

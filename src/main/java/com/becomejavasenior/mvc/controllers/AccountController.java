@@ -27,7 +27,7 @@ public class AccountController {
     }
 
     @RequestMapping("/addAccountForm")
-    public String addAccountForm(ModelMap model) {
+    public String addAccountForm() {
         return "account";
     }
 
@@ -39,6 +39,16 @@ public class AccountController {
     @RequestMapping(value = "/deleteAccount/{id}", method = RequestMethod.GET)
     public String deleteAccount(@PathVariable Integer id) {
         accountRepository.deleteAccount(id);
+        return "redirect:/Account";
+    }
+    @RequestMapping("/editAccountForm/{id}")
+    public String editAccountForm() {
+        return "accountEdit";
+    }
+    @RequestMapping("/editAccount/{id}")
+    public String editAccount(@PathVariable Integer id) {
+        Account account = accountRepository.getAccountById(id);
+        accountRepository.updateAccount(account);
         return "redirect:/Account";
     }
 }

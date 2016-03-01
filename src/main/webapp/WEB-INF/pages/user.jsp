@@ -22,9 +22,6 @@
              });
          });
      </script>
-   <%-- <script src="<c:url value="/resources/js/calendar.js" />"></script>
-    <script src="<c:url value="/resources/js/jquery-2.2.0.js" />"></script>
-    <script src="<c:url value="/resources/js/jquery-ui.js" />"></script>--%>
 
     <title>Add New User</title>
 </head>
@@ -87,5 +84,15 @@
         </div>
     </div>
 </div>
+<%-- <script src="<c:url value="/resources/js/calendar.js" />"></script>
+    <script src="<c:url value="/resources/js/jquery-2.2.0.js" />"></script>
+    <script src="<c:url value="/resources/js/jquery-ui.js" />"></script>--%>
+
+<%--
+<script type="text/javascript" src="<%=request.getContextPath()%>resources/js/calendar.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>resources/js/jquery-2.2.0.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>resources/js/jquery-ui.js"></script>
+--%>
+
 </body>
 </html>
