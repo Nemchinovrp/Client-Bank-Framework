@@ -29,9 +29,9 @@
       username root and blank password. Change below if it's not the case -->
     <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://mysql37.hostland.ru:3306/host1378713"/>
-        <property name="username" value="host1378713_root"/>
-        <property name="password" value="265f61ab"/>
+        <property name="url" value="jdbc:mysql://mysql37.hostland.ru:3306/host"/>
+        <property name="username" value=""/>
+        <property name="password" value=""/>
         <property name="validationQuery" value="SELECT 1"/>
     </bean>
 
